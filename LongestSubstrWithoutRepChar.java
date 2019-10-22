@@ -14,5 +14,19 @@ class Solution {
          }
          return max;
      }
-     // DP
+
+     // wrong answer need method to caculate " "
+     public int lengthOfLongestSubstring2(String s){
+      int[] map = new int[128];
+      Arrays.fill(map, 0);
+      int res = 0, left = 0;
+      int len = s.length();
+      for (int i = 0; i < len; i++){
+          left = Math.max(left, map[s.charAt(i)]);
+          map[s.charAt(i)] = i;
+          res = Math.max(res, i - left);
+       }
+       return res;
+   }
+     
 }

@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 /*
     keywords: HashMap
 */
@@ -13,5 +16,6 @@ class Solution {
             }
             map.put(numbers[i], i);
         }
+        throw new IllegalArgumentException("No two sum solution");
     }
 }
